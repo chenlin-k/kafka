@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="GB18030"?>
+<!-- the proxool configuration can be embedded within your own application's.
+Anything outside the "proxool" tag is ignored. -->
+<something-else-entirely>
+
+<!--   其他数据库 -->
+   <proxool>
+    <alias>approval</alias>
+<!--     	<driver-url>jdbc:mysql://192.168.0.182:3029/jnyd?useUnicode=true&amp;characterEncoding=UTF-8</driver-url> -->
+    	 <driver-url>jdbc:mysql://192.168.88.230:3306/splider?useUnicode=true&amp;characterEncoding=UTF-8</driver-url>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <driver-properties>
+      <property name="user" value="root"/>
+      <property name="password" value="123456"/>
+<!--       <property name="password" value="ahlzdzkj@BF2016"/> -->
+      
+    </driver-properties>
+    <maximum-connection-count>10</maximum-connection-count>
+    <minimum-connection-count>1</minimum-connection-count>
+    <maximum-active-time>36000000</maximum-active-time>
+    <simultaneous-build-throttle>500</simultaneous-build-throttle>
+    <house-keeping-test-sql>select 1 from dual</house-keeping-test-sql>
+  </proxool>
+  
+
+</something-else-entirely>
